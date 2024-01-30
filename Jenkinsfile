@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Install Git') {
             steps {
-                sh 'sudo apt update && sudo apt install -y git'
+                sh 'apt update && apt install -y git'
             }
         }
         stage('Checkout') {
