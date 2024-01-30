@@ -2,12 +2,6 @@ pipeline {
     agent {
         node {
             label 'docker-agent-python'
-        }
-    }
-    stages {
-        stage('Install Git') {
-            steps {
-                sh 'apt update && apt install -y git'
             }
         }
         stage('Checkout') {
