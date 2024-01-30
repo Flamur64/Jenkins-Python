@@ -2,14 +2,15 @@ pipeline {
     agent {
         node {
             label 'docker-agent-python'
-            }
         }
+    }
+    stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Flamur64/Jenkins-Python.git'
+                git 'https://github.com/your-username/your-repo.git'
             }
         }
-        stage('Install Dependencies') {
+        stage('Build') {
             steps {
                 sh 'pip install -r myapp/requirements.txt'
             }
