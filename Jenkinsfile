@@ -1,13 +1,11 @@
 pipeline {
     agent {
-        node {
-            label 'docker-agent-python'
-        }
+        label 'docker-agent-python'
     }
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Flamur64/Jenkins-Python.git'
+                git 'https://github.com/yourusername/yourrepository.git'
             }
         }
         stage('Build') {
@@ -22,7 +20,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh 'python3 myapp/main.py'
+                sh 'python3 myapp/main.py arg1 arg2'
             }
         }
     }
