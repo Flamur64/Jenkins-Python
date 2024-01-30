@@ -5,12 +5,17 @@ pipeline {
         }
     }
     stages {
+        stage('Install Git') {
+            steps {
+                sh 'apt-get update && apt-get install -y git'
+            }
+        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/Flamur64/Jenkins-Python.git'
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
                 sh 'pip install -r myapp/requirements.txt'
             }
