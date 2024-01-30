@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Flamur64/Jenkins-Python.git'
+                git 'https://github.com/Flamur64/Jenkins-Python'
             }
         }
         stage('Build') {
